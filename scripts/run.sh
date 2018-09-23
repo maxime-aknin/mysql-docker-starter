@@ -2,6 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../" >/dev/null && pwd )"
 mkdir -p $DIR/data
+mkdir -p $DIR/shared
 
 if [ ! "$(docker ps -q -f name=db)" ]; then
     if [ "$(docker ps -aq -f status=exited -f name=db)" ]; then
